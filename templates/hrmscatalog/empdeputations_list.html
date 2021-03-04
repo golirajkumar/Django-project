@@ -1,0 +1,15 @@
+{% extends 'base_generic.html' %}
+{% block content %}
+	<h1>Total Employee Deputations informations</h1>
+	{% if object_list %}
+		<ul>
+			{% for empdeputations in object_list %}
+				<li>
+					<a href = "{{ empdeputations.get_absolute_url }}">{{ empdeputations.deputID }} </a>, {{ empdeputations.deputStatus }}, {{ empdeputations.deputCity }}
+				</li>
+			{% endfor %}
+		</ul>
+	{% else %}
+		<p>There Are No Deputations in this system</p>
+	{% endif %}
+{% endblock %}

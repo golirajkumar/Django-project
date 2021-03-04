@@ -1,0 +1,16 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+	<h1>Total Job Categories Informations</h1>
+		{% if object_list %}
+			<ul>
+			{% for jobcategories in object_list %}
+				<li>
+					<a href = "{{ jobcategories.get_absolute_url }}">{{ jobcategories.jobCatID }}</a>, {{ jobcategories.jobCatName }}, {{ jobcategories.jobCatDesc }}
+				</li>
+			{% endfor %}
+			</ul>
+		{% else %}
+			<p>There Are no Job Categories in the system</p>
+		{% endif %}
+{% endblock %}

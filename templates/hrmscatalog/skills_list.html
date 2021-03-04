@@ -1,0 +1,16 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+	<h1>Total Skills Information</h2>
+	{% if object_list %}
+		<ul>
+			{% for skills in object_list %}
+				<li>
+					<a href = "{{ skills.get_absolute_url }}">{{ skills.skillID }}</a>, {{ skills.skillName }}, {{ skills.sillDesc }}
+				</li>
+			{% endfor %}
+		</ul>
+	{% else %}
+		<p>There is no Skills In this System</p>
+	{% endif %}
+{% endblock %}

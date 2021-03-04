@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<h1>This is The Index Page</h1>
+	<ul>
+		<li>num of employees are : <b>{{ num_Employees }}</b></li>
+		<li>num of Deputations are : <b>{{ num_Deputations }}</b></li>
+		<li>num of Active Deputations are : <b>{{ num_ActiveDeputations }}</b></li>
+		<li>num of Departments are : <b>{{ num_Departments }}</b></li>
+	</ul>
+	<p> The Total No Of Times You Visited This Site Is : {{num_visits}} {% if num_visits == 1 %} Times {% else %} Times {% endif %} </p>
+	
+{% endblock %}

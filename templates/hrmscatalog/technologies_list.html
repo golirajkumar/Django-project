@@ -1,0 +1,16 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+	<h1>This Is The Technologies List</h1>
+	{% if object_list %}
+		<ul>
+			{% for techoligies in object_list %}
+				<li>
+					<a href = "{{ 'techoligies.get_absolute_url' }}"</a> {{ techoligies.technologyName }}
+				</li>
+			{% endfor %}
+		</ul>
+	{% else %}
+		<p>there is no technologies in this system</p>
+	{% endif %}
+{% endblock %}S
